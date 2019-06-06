@@ -19,14 +19,14 @@ import (
 )
 
 const (
-	low_string = "abcdefghijklmnopqrstuvwxyz"
-  uper_string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  number_string = "0123456789"
-  simbols_string = "~!@#$%^&*()_+-={}|[]:?."
+    low_string = "abcdefghijklmnopqrstuvwxyz"
+    uper_string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    number_string = "0123456789"
+    simbols_string = "~!@#$%^&*()_+-={}|[]:?."
 )
 
 func random_string(type_output string, max int) (string) {
-	output := ""
+    output := ""
     possibles_characters := ""
     if type_output == "low_string" || type_output == "string_number" || type_output == "all" {
         possibles_characters += low_string
