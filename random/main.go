@@ -4,13 +4,13 @@ package random
 // By Tedezed
 //
 // Usage:
-// fmt.Print(random_string("all", 10))
-// fmt.Print(random_string("low_string", 10))
-// fmt.Print(random_string("uper_string", 10))
-// fmt.Print(random_string("number", 10))
-// fmt.Print(random_string("simbols", 10))
-// fmt.Print(random_string("string_number", 10))
-// fmt.Print(random_int(1, 100))
+// fmt.Print(RandomString("all", 10))
+// fmt.Print(RandomString("low_string", 10))
+// fmt.Print(RandomString("uper_string", 10))
+// fmt.Print(RandomString("number", 10))
+// fmt.Print(RandomString("simbols", 10))
+// fmt.Print(RandomString("string_number", 10))
+// fmt.Print(RandomInt(1, 100))
 
 import (
     //"fmt"
@@ -25,7 +25,7 @@ const (
     simbols_string = "~!@#$%^&*()_+-={}|[]:?."
 )
 
-func random_string(type_output string, max int) (string) {
+func RandomString(type_output string, max int) (string) {
     output := ""
     possibles_characters := ""
     if type_output == "low_string" || type_output == "string_number" || type_output == "all" {
@@ -42,12 +42,12 @@ func random_string(type_output string, max int) (string) {
     }
 
     for i := 0; i < max; i++ {
-        output += string([]rune(possibles_characters)[random_int(0,len(possibles_characters))])
+        output += string([]rune(possibles_characters)[RandomInt(0,len(possibles_characters))])
     }
     return output
 }
 
-func random_int(min int, max int) (int) {
+func RandomInt(min int, max int) (int) {
     rand.Seed(time.Now().UnixNano())
     return rand.Intn(max - min) + min
 }
