@@ -13,7 +13,7 @@ package random
 // fmt.Print(random_int(1, 100))
 
 import (
-    "fmt"
+    //"fmt"
     "math/rand"
     "time"
 )
